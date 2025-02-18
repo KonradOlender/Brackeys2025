@@ -134,7 +134,7 @@ animations = [{
 "duration": 0.2,
 "texture": SubResource("AtlasTexture_gbtya")
 }, {
-"duration": 0.5,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_gfjya")
 }, {
 "duration": 0.6,
@@ -143,16 +143,16 @@ animations = [{
 "duration": 0.3,
 "texture": SubResource("AtlasTexture_13hyh")
 }, {
-"duration": 0.3,
+"duration": 0.6,
 "texture": SubResource("AtlasTexture_bw17k")
 }, {
-"duration": 0.4,
+"duration": 0.6,
 "texture": SubResource("AtlasTexture_fip7f")
 }, {
 "duration": 0.3,
 "texture": SubResource("AtlasTexture_s4x8p")
 }, {
-"duration": 0.3,
+"duration": 0.6,
 "texture": SubResource("AtlasTexture_lcdkl")
 }, {
 "duration": 0.4,
@@ -202,7 +202,7 @@ script = ExtResource("1_6mrwf")
 
 [node name="AnimatedGlove" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cjl17")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
 script = ExtResource("4_a5v8e")
 
@@ -211,6 +211,5 @@ shape = SubResource("CapsuleShape2D_w0ph6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(200, 0)
-zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
