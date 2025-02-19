@@ -198,6 +198,7 @@ height = 488.0
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+collision_mask = 2
 script = ExtResource("1_6mrwf")
 
 [node name="AnimatedGlove" type="AnimatedSprite2D" parent="."]
@@ -211,5 +212,6 @@ shape = SubResource("CapsuleShape2D_w0ph6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(200, 0)
+zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0

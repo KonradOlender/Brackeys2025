@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed := 350
+@export var hp := 10
 const FLOATY_GRAVITY := 100
 
 @export var jump_height : float
@@ -38,3 +39,10 @@ func get_gravity_fall() -> float:
 func jump():
 	is_jumping = true
 	velocity.y = jump_velocity
+
+func take_damage(damage := 1):
+	hp -= damage
+	print_debug(hp)
+
+func on_spikes_triggered(damage):
+	take_damage(damage)
