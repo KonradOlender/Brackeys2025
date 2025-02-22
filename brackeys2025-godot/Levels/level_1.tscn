@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh7rtfr50mvso"]
+[gd_scene load_steps=8 format=3 uid="uid://dh7rtfr50mvso"]
 
 [ext_resource type="PackedScene" uid="uid://y7tnowmq5k2r" path="res://Player/player.tscn" id="1_nrdeq"]
+[ext_resource type="Texture2D" uid="uid://bj1362piqiphn" path="res://Levels/castle walls.png" id="1_ylyq0"]
 [ext_resource type="PackedScene" uid="uid://cqs7jx32vil3v" path="res://Obstacles/spikes.tscn" id="2_anua6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxvv6"]
@@ -15,6 +16,15 @@ size = Vector2(1849, 132)
 size = Vector2(3843.76, 132)
 
 [node name="Level1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ylyq0")
+region_enabled = true
+region_rect = Rect2(0, 0, 960, 960)
+
+[node name="Parallax2D" type="Parallax2D" parent="Sprite2D"]
+repeat_size = Vector2(10, 1)
+repeat_times = 3
 
 [node name="Player" parent="." instance=ExtResource("1_nrdeq")]
 position = Vector2(-399, 60)
