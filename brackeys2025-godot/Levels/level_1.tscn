@@ -1,8 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dh7rtfr50mvso"]
+[gd_scene load_steps=10 format=3 uid="uid://dh7rtfr50mvso"]
 
 [ext_resource type="PackedScene" uid="uid://y7tnowmq5k2r" path="res://Player/player.tscn" id="1_nrdeq"]
 [ext_resource type="Texture2D" uid="uid://bj1362piqiphn" path="res://Levels/castle walls.png" id="1_ylyq0"]
 [ext_resource type="PackedScene" uid="uid://cqs7jx32vil3v" path="res://Obstacles/spikes.tscn" id="2_anua6"]
+[ext_resource type="Texture2D" uid="uid://dm0tdu0dyx213" path="res://Levels/castle walls_mipmap.png" id="2_l6mml"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_tb2xp"]
+diffuse_texture = ExtResource("1_ylyq0")
+normal_texture = ExtResource("2_l6mml")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxvv6"]
 size = Vector2(13034, 132)
@@ -17,17 +22,19 @@ size = Vector2(3843.76, 132)
 
 [node name="Level1" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ylyq0")
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scale = Vector2(1.8, 1.8)
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(960, 960)
+repeat_times = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture = SubResource("CanvasTexture_tb2xp")
 region_enabled = true
 region_rect = Rect2(0, 0, 960, 960)
 
-[node name="Parallax2D" type="Parallax2D" parent="Sprite2D"]
-repeat_size = Vector2(10, 1)
-repeat_times = 3
-
 [node name="Player" parent="." instance=ExtResource("1_nrdeq")]
-position = Vector2(-399, 60)
+position = Vector2(-323, 63)
 speed = 700
 jump_height = 500.0
 jump_time_to_peak = 0.3
