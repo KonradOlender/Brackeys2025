@@ -1,4 +1,5 @@
 [gd_scene load_steps=10 format=3 uid="uid://dh7rtfr50mvso"]
+[gd_scene load_steps=15 format=3 uid="uid://dh7rtfr50mvso"]
 
 [ext_resource type="PackedScene" uid="uid://y7tnowmq5k2r" path="res://Player/player.tscn" id="1_nrdeq"]
 [ext_resource type="Texture2D" uid="uid://bj1362piqiphn" path="res://Levels/castle walls.png" id="1_ylyq0"]
