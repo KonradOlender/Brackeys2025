@@ -204,19 +204,13 @@ script = ExtResource("1_6mrwf")
 
 [node name="AnimatedGlove" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cjl17")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.837495
+frame_progress = 0.0747131
 script = ExtResource("4_a5v8e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_w0ph6")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(200, 0)
-zoom = Vector2(0.5, 0.5)
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.989586, 0.966321, 0.754686, 1)

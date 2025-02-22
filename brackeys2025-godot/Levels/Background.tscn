@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://whruw0oxusac"]
+
+[ext_resource type="Texture2D" uid="uid://bj1362piqiphn" path="res://Levels/castle walls.png" id="1_hd5i2"]
+[ext_resource type="Texture2D" uid="uid://dm0tdu0dyx213" path="res://Levels/castle walls_mipmap.png" id="2_i1jrq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vqee4"]
+diffuse_texture = ExtResource("1_hd5i2")
+normal_texture = ExtResource("2_i1jrq")
+
+[node name="Background" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 1)
+repeat_size = Vector2(960, 960)
+repeat_times = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture = SubResource("CanvasTexture_vqee4")

@@ -17,7 +17,6 @@ var is_jumping: bool = false
 
 func _ready() -> void:
 	based_fall_gravity = fall_gravity
-	$Ground_slam_hitbox.collision_mask = 0
 
 func _physics_process(delta: float) -> void:
 	
@@ -26,7 +25,6 @@ func _physics_process(delta: float) -> void:
 		fall_gravity = based_fall_gravity
 		if is_slaming:
 			is_slaming = false
-			$Ground_slam_hitbox.collision_mask = 0
 			
 	#actual momvement
 	var direction := Vector2(0,0)
@@ -37,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	#jumping
 	if !Input.is_action_pressed("jump"):
 		velocity.y += get_gravity_fall() * delta
-	velocity.y += get_gravity_jump() * delta
+	#velocity.y += get_gravity_jump() * delta
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jump()
@@ -66,5 +64,4 @@ func on_spikes_triggered(damage):
 	
 func ground_slam():
 	is_slaming = true
-	$Ground_slam_hitbox.collision_mask = 4
 	fall_gravity *= 10
